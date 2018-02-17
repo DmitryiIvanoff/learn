@@ -1,0 +1,174 @@
+#include "stdafx.h"
+#include <gl\glut.h>
+#include <math.h>
+#include <Windows.h>
+#include <iostream>
+#include <gl\glaux.h>
+#pragma comment(lib, "glaux.lib")
+
+GLfloat angle = 0, angle2 = 0;
+GLdouble zNear = 1, zFar = 10, x = 2, y = 2, z = 2; int f = 45; float a = 0.5, b = 1, c = 1; bool flag = false, change = false;
+bool face = false, nonface = false;GLuint list = 0;
+void init(void)
+{
+	glClearColor(1.0, 1.0, 0.0, 0.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60, 1, zNear, zFar);//перспективная проекция
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	//рисуем фигуру с помощью списка
+	list = glGenLists(1); //Генерация незадействованного индекса списка
+	glNewList(list, GL_COMPILE); //Создание списка и накопление команд 
+	// грань f0
+	glBegin(GL_POLYGON);
+	glNormal3f(1, 1, 1);
+	glVertex3f(2, 0, 0);
+	glVertex3f(1, 0, 2);
+	glVertex3f(1, 1, 1.5);
+	glVertex3f(1.5, 1, 0);
+	glEnd();
+	// грань f1
+	glBegin(GL_POLYGON);
+	glNormal3f(-1, 1, 1);
+	glVertex3f(1, 1, 1.5);
+	glVertex3f(1, 0, 2);
+	glVertex3f(0, 0, 0);
+	glVertex3f(0.5, 1, 0);
+	glEnd();
+	// грань f2
+	glBegin(GL_POLYGON);
+	glNormal3f(0, 0, -1);
+	glVertex3f(0, 0, 0);
+	glVertex3f(2, 0, 0);
+	glVertex3f(1.5, 1, 0);
+	glVertex3f(0.5, 1, 0);
+	glEnd();
+	// грань f3
+	glBegin(GL_POLYGON);
+	glNormal3f(0, 1, 0);
+	glVertex3f(0.5, 1, 0);
+	glVertex3f(1.5, 1, 0);
+	glVertex3f(1, 1, 1.5);
+	glEnd();
+	// грань f4
+	glBegin(GL_POLYGON);
+	glNormal3f(0, -1, 0);
+	glVertex3f(2, 0, 0);
+	glVertex3f(0, 0, 0);
+	glVertex3f(1, 0, 2);
+	glEnd();
+	glEndList();
+	//
+}
+void myDisplay()
+{
+	glPushMatrix(); //Сохраняем VM = 1
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glEnable(GL_DEPTH_TEST);
+	gluLookAt(0, 3, 3, 0, 0, 0, 0, 1, 0); // VM=Fwe - позиция наблюдателя
+	//источник света
+	glPushMatrix();
+	glRotatef(angle, 0, 1, 0); // вращаем объект
+	GLfloat myLightPosition[] = { 1.0, 2.0, 2.0, 1.0 };
+
+	GLfloat myAmbient[] = { 0.19125, 0.0735, 0.0225, 1 };
+	GLfloat myDiffuse[] = { 0.7038, 0.27048, 0.0828, 1 };
+	GLfloat mySpecular[] = { 0.256777, 0.137622, 0.086014, 1 };
+	GLfloat myShininess[] = { 12.8 };
+
+
+	glLightfv(GL_LIGHT0, GL_AMBIENT, myAmbient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, myDiffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, mySpecular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, myShininess);
+
+	glLightfv(GL_LIGHT0, GL_POSITION, myLightPosition);
+	glEnable(GL_LIGHTING); // Включение расчета освещенности
+	glEnable(GL_LIGHT0); // включаем этот конкретный источник
+	glPopMatrix();
+	glPushMatrix();
+	//glTranslatef(…); // перемещаем источник света
+	glPopMatrix();
+	std::cout << angle<<std::endl;
+	
+	//glMatrixMode(GL_MODELVIEW);
+	//glLoadIdentity();
+	//glDisable(GL_LIGHTING); //Выключаем освещение
+	
+	glRotatef(angle2, 0, 1, 0); // вращаем источник света
+	
+	glCallList(list);
+	
+	glEnable(GL_NORMALIZE);
+	glPopMatrix();
+	glutSwapBuffers();
+}
+
+void myReshape(int width, int height)
+{
+	if (width / height<1) glViewport(0, 0, width, width);
+	else glViewport(0, 0, height, height);
+}
+void myIdle()
+{
+	if (flag){
+		angle += 0.5;
+		if (angle > 360.0) angle = 0;
+		//glutPostRedisplay();
+	}
+	if (change){
+		angle2 += 2;
+		if (angle2 > 360.0) angle2 = 0;
+		//glutPostRedisplay();
+	}
+	if (face){
+		glCullFace(GL_FRONT);
+		glEnable(GL_CULL_FACE);
+		//glutPostRedisplay();
+	}
+	if (nonface){
+		glCullFace(GL_BACK);
+		glEnable(GL_CULL_FACE);
+	}
+	glutPostRedisplay();
+	Sleep(20);
+}
+
+void myKey(unsigned char key, int d, int g){
+	switch (key){
+	case 'l':flag = true; break;
+	case 'L':flag = false; break;
+	case 'o':change = true; break;
+	case 'O':change = false; break;
+	case 'f':face = true; nonface=false; break;//визуализация лицевых граней
+	case 'b':nonface = true; face = false; break;//визуализация нелицевых граней
+	}
+	glutPostRedisplay();
+}
+
+void myMouse(int button, int state, int x, int y){
+	if (state == GLUT_UP){
+		switch (button){
+		case GLUT_LEFT_BUTTON:change = true; break;
+		case GLUT_RIGHT_BUTTON:change = false; break;
+		}
+	}
+	glutPostRedisplay();
+}
+
+int main(int argc, char* argv[])
+{
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);//режим дисплея
+	glutInitWindowSize(800, 800);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("my window");
+	glutDisplayFunc(myDisplay);
+	glutReshapeFunc(myReshape);
+	glutKeyboardFunc(myKey);
+	glutMouseFunc(myMouse);
+	glutIdleFunc(myIdle);
+	init();
+	glutMainLoop();
+}

@@ -1,0 +1,211 @@
+#include "stdafx.h"
+#include <gl\glut.h>
+#include <math.h>
+#include <Windows.h>
+#include <iostream>
+#include <gl\glaux.h>
+#pragma comment(lib, "glaux.lib")
+
+GLfloat angle = 0, angle2 = 0;
+GLdouble zNear = 1, zFar = 10, x = 2, y = 2, z = 2; int f = 45; float a = 0.5, b = 1, c = 1; bool flag = false, change = false;
+bool face = false, nonface = false; GLuint list = 0; bool another = false;
+GLuint texture[3];     // Место для хранения 3 текстур
+
+void init(void)
+{
+	glClearColor(1.0, 1.0, 0.0, 0.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60, 1, zNear, zFar);//перспективная проекция
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	glEnable(GL_TEXTURE_2D);
+	glGenTextures(3, &texture[0]);//текстура создаем 3 текстуры
+
+	AUX_RGBImageRec *image = auxDIBImageLoad("image.bmp");
+	glBindTexture(GL_TEXTURE_2D, texture[0]);//делаем текущей текстурой текстуру 0
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
+
+	AUX_RGBImageRec *image2 = auxDIBImageLoad("image2.bmp");
+	glBindTexture(GL_TEXTURE_2D, texture[1]);//делаем текущей текстурой текстуру 1
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image2->sizeX, image2->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image2->data);
+
+	AUX_RGBImageRec *image3 = auxDIBImageLoad("image3.bmp");
+	glBindTexture(GL_TEXTURE_2D, texture[2]);//делаем текущей текстурой текстуру 2
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image3->sizeX, image3->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image3->data);
+
+	//рисуем фигуру с помощью списка
+	list = glGenLists(1); //Генерация незадействованного индекса списка
+	glNewList(list, GL_COMPILE); //Создание списка и накопление команд 
+	// грань f0
+	if (!another){ glBindTexture(GL_TEXTURE_2D, texture[0]); }
+	else{ glDisable(GL_TEXTURE_2D); std::cout << "false"; }
+	glBegin(GL_POLYGON);
+	glNormal3f(1, 1, 1);
+	glTexCoord2f(1,0); glVertex3f(2, 0, 0);
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 2);
+	glTexCoord2f(0, 1); glVertex3f(1, 1, 1.5);
+	glTexCoord2f(1, 1); glVertex3f(1.5, 1, 0);
+//	glDisable(GL_TEXTURE_2D);
+	glEnd();
+	// грань f1
+	if (!another)glBindTexture(GL_TEXTURE_2D, texture[1]);
+	glBegin(GL_POLYGON);
+	glNormal3f(-1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 1, 1.5);
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 2);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 0);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 1, 0);
+//	glDisable(GL_TEXTURE_2D);
+	glEnd();
+	if (!another)glBindTexture(GL_TEXTURE_2D, texture[2]);
+	// грань f2
+	glBegin(GL_POLYGON);
+	glNormal3f(0, 0, -1);
+	glTexCoord2f(1, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 0); glVertex3f(2, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1.5, 1, 0);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 1, 0);
+	glEnd();
+	// грань f3
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+	glBegin(GL_POLYGON);
+	glNormal3f(0, 1, 0);
+	glTexCoord2f(1, 0); glVertex3f(0.5, 1, 0);
+	glTexCoord2f(0, 0); glVertex3f(1.5, 1, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 1, 1.5);
+	glEnd();
+	// грань f4
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+	glBegin(GL_POLYGON);
+	glNormal3f(0, -1, 0);
+	glTexCoord2f(1, 0); glVertex3f(2, 0, 0);
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 2);
+	glEnd();
+	glEndList();
+
+}
+void myDisplay()
+{
+	glPushMatrix(); //Сохраняем VM = 1
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	
+	glEnable(GL_DEPTH_TEST);
+
+	gluLookAt(0, 3, 3, 0, 0, 0, 0, 1, 0); // VM=Fwe - позиция наблюдателя
+
+	//источник света
+	glPushMatrix();
+
+	
+	glRotatef(angle, 0, 1, 0); // вращаем объект
+	GLfloat myLightPosition[] = { 1.0, 2.0, 2.0, 1.0 };
+	
+	GLfloat myAmbient[] = { 0.19125, 0.0735, 0.0225, 1 };
+	GLfloat myDiffuse[] = { 0.7038, 0.27048, 0.0828, 1 };
+	GLfloat mySpecular[] = { 0.256777, 0.137622, 0.086014, 1 };
+	GLfloat myShininess[] = { 12.8 };
+
+	if (another){
+		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		/*glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, myAmbient);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, myDiffuse);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mySpecular);
+		glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, myShininess);*/
+		
+	}
+	else{ glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE); }
+	glLightfv(GL_LIGHT0, GL_POSITION, myLightPosition);
+	glEnable(GL_LIGHTING); // Включение расчета освещенности
+	glEnable(GL_LIGHT0); // включаем этот конкретный источник
+	glPopMatrix();
+	glPushMatrix();
+	//glTranslatef(…); // перемещаем источник света
+	glPopMatrix();
+	//glDisable(GL_LIGHTING); //Выключаем освещение
+
+	glRotatef(angle2, 0, 1, 0); // вращаем источник света
+
+	glCallList(list);//вызываем список команд
+
+	//glEnable(GL_NORMALIZE);//нормализуем
+	glPopMatrix();
+	glutSwapBuffers();
+}
+
+void myReshape(int width, int height)
+{
+	if (width / height<1) glViewport(0, 0, width, width);
+	else glViewport(0, 0, height, height);
+}
+void myIdle()
+{
+	if (flag){
+		angle += 0.5;
+		if (angle > 360.0) angle = 0;
+		//glutPostRedisplay();
+	}
+	if (change){
+		angle2 += 2;
+		if (angle2 > 360.0) angle2 = 0;
+		//glutPostRedisplay();
+	}
+	if (face){
+		glCullFace(GL_FRONT);
+		glEnable(GL_CULL_FACE);
+		//glutPostRedisplay();
+	}
+	if (nonface){
+		glCullFace(GL_BACK);
+		glEnable(GL_CULL_FACE);
+	}
+	glutPostRedisplay();
+	Sleep(20);
+}
+
+void myKey(unsigned char key, int d, int g){
+	switch (key){
+	case 'l':flag = true; break;
+	case 'L':flag = false; break;
+	case 'o':change = true; break;
+	case 'O':change = false; break;
+	case 'f':face = true; nonface = false; break;//визуализация лицевых граней
+	case 'b':nonface = true; face = false; break;//визуализация нелицевых граней
+	case 'a':another = true; break;
+	case 'A':another = false; break;
+	}
+	glutPostRedisplay();
+}
+
+void myMouse(int button, int state, int x, int y){
+	if (state == GLUT_UP){
+		switch (button){
+		case GLUT_LEFT_BUTTON:another = false; break;
+		case GLUT_RIGHT_BUTTON:another = true; break;
+		}
+	}
+	glutPostRedisplay();
+}
+
+int main(int argc, char* argv[])
+{
+	glutInit(&argc, argv);
+	//glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);//режим дисплея
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+	glutInitWindowSize(800, 800);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("my window");
+	glutDisplayFunc(myDisplay);
+	glutReshapeFunc(myReshape);
+	glutKeyboardFunc(myKey);
+	glutMouseFunc(myMouse);
+	glutIdleFunc(myIdle);
+	init();
+	glutMainLoop();
+}
