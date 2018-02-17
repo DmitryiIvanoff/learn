@@ -1,0 +1,7 @@
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\bin\Debug\Kpo4162_Ivanov.Lib.dll
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\bin\Debug\Kpo4162_Ivanov.Lib.pdb
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\obj\Debug\Kpo4162_Ivanov.Lib.dll
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\obj\Debug\Kpo4162_Ivanov.Lib.pdb
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\obj\Debug\Kpo4162_Ivanov.Lib.csprojResolveAssemblyReference.cache
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\obj\Debug\Kpo4162.Ivanov.Lib.FrmProject.resources
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov\Kpo4162_Ivanov.Lib\obj\Debug\Kpo4162_Ivanov.Lib.csproj.GenerateResource.Cache

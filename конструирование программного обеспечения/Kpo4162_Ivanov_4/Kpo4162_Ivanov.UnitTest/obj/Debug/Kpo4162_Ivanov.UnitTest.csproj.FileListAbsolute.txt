@@ -1,0 +1,7 @@
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\bin\Debug\Kpo4162_Ivanov.UnitTest.dll
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\bin\Debug\Kpo4162_Ivanov.UnitTest.pdb
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\bin\Debug\Kpo4162_Ivanov.Lib.dll
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\bin\Debug\Kpo4162_Ivanov.Lib.pdb
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\obj\Debug\Kpo4162_Ivanov.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\obj\Debug\Kpo4162_Ivanov.UnitTest.dll
+C:\Users\username\Desktop\Вдовичев\Kpo4162_Ivanov_4\Kpo4162_Ivanov.UnitTest\obj\Debug\Kpo4162_Ivanov.UnitTest.pdb
