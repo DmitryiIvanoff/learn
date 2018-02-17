@@ -1,0 +1,19 @@
+﻿Сборка начата 17.02.2018 12:46:10.
+     1>Проект "C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Laba5.1\Laba5.1.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Laba5.1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Laba5.1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Laba5.1.cpp
+         Laba5.1.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Laba5.1.res" Laba5.1.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Debug\Laba5.1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Debug\Laba5.1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Debug\Laba5.1.lib" /MACHINE:X86 Debug\Laba5.1.res
+         Debug\Laba5.1.obj
+         Debug\stdafx.obj
+         Laba5.1.vcxproj -> C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Debug\Laba5.1.exe
+     1>Сборка проекта "C:\Users\username\Desktop\учеба\4 семестр\ОС\мои лабы\Laba5.1\Laba5.1\Laba5.1.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.57

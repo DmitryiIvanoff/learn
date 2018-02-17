@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laba3", "Laba3\Laba3.vcxproj", "{912260BE-E27D-4DDD-97E0-B26AD7436E03}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewProccess", "NewProccess\NewProccess.vcxproj", "{1EEE9EAF-E6C4-443F-A179-FBD558E96A12}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewProcess2", "NewProcess2\NewProcess2.vcxproj", "{9CA6C528-3631-4B25-970C-86013FA097A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{912260BE-E27D-4DDD-97E0-B26AD7436E03}.Debug|Win32.ActiveCfg = Debug|Win32
+		{912260BE-E27D-4DDD-97E0-B26AD7436E03}.Debug|Win32.Build.0 = Debug|Win32
+		{912260BE-E27D-4DDD-97E0-B26AD7436E03}.Release|Win32.ActiveCfg = Release|Win32
+		{912260BE-E27D-4DDD-97E0-B26AD7436E03}.Release|Win32.Build.0 = Release|Win32
+		{1EEE9EAF-E6C4-443F-A179-FBD558E96A12}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1EEE9EAF-E6C4-443F-A179-FBD558E96A12}.Debug|Win32.Build.0 = Debug|Win32
+		{1EEE9EAF-E6C4-443F-A179-FBD558E96A12}.Release|Win32.ActiveCfg = Release|Win32
+		{1EEE9EAF-E6C4-443F-A179-FBD558E96A12}.Release|Win32.Build.0 = Release|Win32
+		{9CA6C528-3631-4B25-970C-86013FA097A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9CA6C528-3631-4B25-970C-86013FA097A9}.Debug|Win32.Build.0 = Debug|Win32
+		{9CA6C528-3631-4B25-970C-86013FA097A9}.Release|Win32.ActiveCfg = Release|Win32
+		{9CA6C528-3631-4B25-970C-86013FA097A9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
