@@ -1,0 +1,16 @@
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\bin\Debug\Kursovaya_Ivanov.exe.config
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\bin\Debug\Kursovaya_Ivanov.exe
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\bin\Debug\Kursovaya_Ivanov.pdb
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.Form1.resources
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.Properties.Resources.resources
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.exe
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.pdb
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.Document.resources
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.LgotaVid.resources
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.Lgota.resources
+C:\Users\USER\Desktop\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.Lgotnik.resources
+C:\Users\username\Desktop\учеба\5 семестр\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\bin\Debug\Kursovaya_Ivanov.exe.config
+C:\Users\username\Desktop\учеба\5 семестр\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.exe
+C:\Users\username\Desktop\учеба\5 семестр\5 семестр\РИС\РИС\лабы\Программа\Kursovaya_Ivanov\Kursovaya_Ivanov\obj\Debug\Kursovaya_Ivanov.pdb
