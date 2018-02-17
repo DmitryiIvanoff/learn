@@ -1,0 +1,11 @@
+﻿Сборка начата 17.02.2018 12:16:17.
+     1>Проект "C:\Users\username\Desktop\учеба\4 семестр\Базы данных\LR1\Laba1\Laba1\Laba1.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Laba1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Laba1.cpp
+         Laba1.cpp
+     1>c:\users\username\desktop\учеба\4 семестр\базы данных\lr1\laba1\laba1\laba1.cpp(8): fatal error C1083: Не удается открыть файл включение: sqlfront.h: No such file or directory
+     1>Сборка проекта "C:\Users\username\Desktop\учеба\4 семестр\Базы данных\LR1\Laba1\Laba1\Laba1.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+Затраченное время: 00:00:00.70
