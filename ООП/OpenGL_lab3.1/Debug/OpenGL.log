@@ -1,0 +1,76 @@
+﻿Сборка начата 17.01.2017 9:05:25.
+     1>Проект "C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\OpenGL.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\OpenGL.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         Note: including lib: glut32.lib
+         
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OpenGL.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Circle.cpp Ellipsoid.cpp Line.cpp MainFrm.cpp OpenGL.cpp OpenGLDoc.cpp OpenGLView.cpp Quadrangle.cpp Rhombus.cpp "ТFigure.cpp"
+         ТFigure.cpp
+         Rhombus.cpp
+         Quadrangle.cpp
+         OpenGLView.cpp
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(84): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(87): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(90): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(93): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(137): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(140): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(143): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(146): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(154): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(170): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(173): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(176): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(202): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(207): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(212): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(217): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(234): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(239): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(244): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(249): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(265): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(270): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(275): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(280): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(296): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(301): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(306): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(311): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(328): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(333): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(338): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(343): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(369): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(372): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(375): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\username\desktop\учеба\3 семестр\третий семестр\объектно-ориентированное программирование\laba\opengl_lab3.1\openglview.cpp(378): warning C4018: <: несоответствие типов со знаком и без знака
+         OpenGLDoc.cpp
+         OpenGL.cpp
+         MainFrm.cpp
+         Line.cpp
+         Ellipsoid.cpp
+         Circle.cpp
+         Создание кода...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0419" /IDebug\ /nologo /fo"Debug\OpenGL.res" OpenGL.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\Debug\OpenGL.exe" /INCREMENTAL /NOLOGO glaux.lib glew32s.lib glew32.lib opengl32.lib glut32.lib glu32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\Debug\OpenGL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\Debug\OpenGL.lib" /MACHINE:X86 Debug\OpenGL.res
+         Debug\Circle.obj
+         Debug\Ellipsoid.obj
+         Debug\Line.obj
+         Debug\MainFrm.obj
+         Debug\OpenGL.obj
+         Debug\OpenGLDoc.obj
+         Debug\OpenGLView.obj
+         Debug\Quadrangle.obj
+         Debug\Rhombus.obj
+         Debug\stdafx.obj
+         "Debug\ТFigure.obj"
+         OpenGL.vcxproj -> C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\Debug\OpenGL.exe
+     1>Сборка проекта "C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL_lab3.1\OpenGL.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:05.42

@@ -1,0 +1,20 @@
+﻿Сборка начата 20.12.2016 10:13:04.
+     1>Проект "C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\OpenGL.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\OpenGL.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt OpenGLView.cpp
+         OpenGLView.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\Release\OpenGL.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\Release\OpenGL.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\Release\OpenGL.lib" /MACHINE:X86 /SAFESEH  /SAFESEH:NO Release\OpenGL.res
+         Release\MainFrm.obj
+         Release\OpenGL.obj
+         Release\OpenGLDoc.obj
+         Release\OpenGLView.obj
+         Release\stdafx.obj
+         Создание кода
+         Создание кода завершено
+         OpenGL.vcxproj -> C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\Release\OpenGL.exe
+     1>Сборка проекта "C:\Users\username\Desktop\учеба\3 семестр\Третий семестр\Объектно-ориентированное программирование\laba\OpenGL\OpenGL.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.13
